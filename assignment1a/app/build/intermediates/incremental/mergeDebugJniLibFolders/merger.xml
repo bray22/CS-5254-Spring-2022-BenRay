@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/benray/vandy/courses/cs5254_concurrent_oop/CS-5254-Spring-2022-BenRay/assignment1a/app/src/main/jniLibs"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/benray/vandy/courses/cs5254_concurrent_oop/CS-5254-Spring-2022-BenRay/assignment1a/app/src/debug/jniLibs"/></dataSet></merger>
