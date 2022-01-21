@@ -2,4 +2,4 @@
 
 ## Assignment 1A
 
-### status: 11 tests passed
+### Status: 11 tests passed
