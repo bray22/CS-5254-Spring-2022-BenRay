@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">2</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.025s</div>
+<div class="counter">6.933s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,140 +61,10 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
-</li>
-<li>
-<a href="#tab1">Tests</a>
+<a href="#tab0">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="normalTest"></a>
-<h3 class="failures">normalTest</h3>
-<span class="code">
-<pre>java.lang.IllegalStateException: Being[101] only completed [0/10] iterations.
-Being[102] only completed [0/10] iterations.
-Being[103] only completed [0/10] iterations.
-Being[104] only completed [0/10] iterations.
-Being[105] only completed [0/10] iterations.
-Being[106] only completed [0/10] iterations.
-Being[107] only completed [0/10] iterations.
-Being[108] only completed [0/10] iterations.
-Being[109] only completed [0/10] iterations.
-Being[110] only completed [0/10] iterations.
-	at edu.vandy.simulator.Simulator.require(Simulator.java:698)
-	at edu.vandy.simulator.Simulator.validateEndState(Simulator.java:376)
-	at edu.vandy.simulator.Simulator.start(Simulator.java:274)
-	at admin.TestHelper.buildModelAndRun(TestHelper.kt:225)
-	at admin.TestHelper.buildModelAndRun(TestHelper.kt:191)
-	at admin.TestHelper.testStrategy(TestHelper.kt:76)
-	at admin.AssignmentIntegratedTest.normalTest(AssignmentIntegratedTest.kt:22)
-	at edu.vandy.simulator.Assignment_1A_IntegratedTest.normalTest(Assignment_1A_IntegratedTest.kt:21)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.mockito.internal.junit.JUnitSessionStore$1.evaluateSafely(JUnitSessionStore.java:55)
-	at org.mockito.internal.junit.JUnitSessionStore$1.evaluate(JUnitSessionStore.java:43)
-	at admin.AssignmentTests$mockkRule$1$1.evaluate(AssignmentTests.kt:51)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:293)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="stressTest"></a>
-<h3 class="failures">stressTest</h3>
-<span class="code">
-<pre>java.lang.IllegalStateException: Being[101] only completed [0/50] iterations.
-Being[102] only completed [0/50] iterations.
-Being[103] only completed [0/50] iterations.
-Being[104] only completed [0/50] iterations.
-Being[105] only completed [0/50] iterations.
-Being[106] only completed [0/50] iterations.
-Being[107] only completed [0/50] iterations.
-Being[108] only completed [0/50] iterations.
-Being[109] only completed [0/50] iterations.
-Being[110] only completed [0/50] iterations.
-Being[111] only completed [0/50] iterations.
-Being[112] only completed [0/50] iterations.
-Being[113] only completed [0/50] iterations.
-Being[114] only completed [0/50] iterations.
-Being[115] only completed [0/50] iterations.
-Being[116] only completed [0/50] iterations.
-Being[117] only completed [0/50] iterations.
-Being[118] only completed [0/50] iterations.
-Being[119] only completed [0/50] iterations.
-Being[120] only completed [0/50] iterations.
-Being[121] only completed [0/50] iterations.
-Being[122] only completed [0/50] iterations.
-Being[123] only completed [0/50] iterations.
-Being[124] only completed [0/50] iterations.
-Being[125] only completed [0/50] iterations.
-Being[126] only completed [0/50] iterations.
-Being[127] only completed [0/50] iterations.
-Being[128] only completed [0/50] iterations.
-Being[129] only completed [0/50] iterations.
-Being[130] only completed [0/50] iterations.
-Being[131] only completed [0/50] iterations.
-Being[132] only completed [0/50] iterations.
-Being[133] only completed [0/50] iterations.
-Being[134] only completed [0/50] iterations.
-Being[135] only completed [0/50] iterations.
-Being[136] only completed [0/50] iterations.
-Being[137] only completed [0/50] iterations.
-Being[138] only completed [0/50] iterations.
-Being[139] only completed [0/50] iterations.
-Being[140] only completed [0/50] iterations.
-Being[141] only completed [0/50] iterations.
-Being[142] only completed [0/50] iterations.
-Being[143] only completed [0/50] iterations.
-Being[144] only completed [0/50] iterations.
-Being[145] only completed [0/50] iterations.
-Being[146] only completed [0/50] iterations.
-Being[147] only completed [0/50] iterations.
-Being[148] only completed [0/50] iterations.
-Being[149] only completed [0/50] iterations.
-Being[150] only completed [0/50] iterations.
-	at edu.vandy.simulator.Simulator.require(Simulator.java:698)
-	at edu.vandy.simulator.Simulator.validateEndState(Simulator.java:376)
-	at edu.vandy.simulator.Simulator.start(Simulator.java:274)
-	at admin.TestHelper.buildModelAndRun(TestHelper.kt:225)
-	at admin.TestHelper.buildModelAndRun(TestHelper.kt:191)
-	at admin.TestHelper.testStrategy(TestHelper.kt:76)
-	at admin.AssignmentIntegratedTest.stressTest(AssignmentIntegratedTest.kt:37)
-	at edu.vandy.simulator.Assignment_1A_IntegratedTest.stressTest(Assignment_1A_IntegratedTest.kt:26)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.mockito.internal.junit.JUnitSessionStore$1.evaluateSafely(JUnitSessionStore.java:55)
-	at org.mockito.internal.junit.JUnitSessionStore$1.evaluate(JUnitSessionStore.java:43)
-	at admin.AssignmentTests$mockkRule$1$1.evaluate(AssignmentTests.kt:51)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
-	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:293)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -205,14 +75,14 @@ Being[150] only completed [0/50] iterations.
 </tr>
 </thead>
 <tr>
-<td class="failures">normalTest</td>
-<td class="failures">0.019s</td>
-<td class="failures">failed</td>
+<td class="success">normalTest</td>
+<td class="success">5.488s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">stressTest</td>
-<td class="failures">0.006s</td>
-<td class="failures">failed</td>
+<td class="success">stressTest</td>
+<td class="success">1.445s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
@@ -224,7 +94,7 @@ Being[150] only completed [0/50] iterations.
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.0.2</a> at Jan 20, 2022, 11:00:16 PM</p>
+<a href="http://www.gradle.org">Gradle 7.0.2</a> at Jan 21, 2022, 1:10:56 PM</p>
 </div>
 </div>
 </body>
