@@ -135,30 +135,23 @@ public class RunnableThreadsMgr
         // TODO -- you fill in here.
 
         RunnableThreadsMgr beingManager = new RunnableThreadsMgr();
-
         Thread waiterThread = new Thread(() -> {
-            beingManager.mBeingThreads =
-                    IntStream.rangeClosed(1, beingManager.getBeingCount())
-                            .mapToObj(unused -> new Thread())
-                            .peek(thread -> {
-                                try {
-                                  thread.join();
-                                } catch (Exception e) {
-                                    beingManager.error(e);
-                                }
-                            })
-                            .collect(Collectors.toList());
+            mBeingThreads =
+                IntStream.rangeClosed(1, beingManager.getBeingCount())
+                    .mapToObj(unused -> new Thread())
+                    .peek(thread -> {
+                        try {
+                          thread.join();
+                        } catch (Exception e) {
+                            beingManager.error(e);
+                        }
+                    })
+                    .collect(Collectors.toList());
         });
-
-
-
-
-
 
         // Start running the thread.
         // TODO -- you fill in here.
         waiterThread.start();
-        
 
         // Return the thread.
         // TODO -- you fill in here replacing this statement with your solution.
