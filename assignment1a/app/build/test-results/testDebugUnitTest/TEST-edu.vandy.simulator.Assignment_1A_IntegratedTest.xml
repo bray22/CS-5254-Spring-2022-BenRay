@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.vandy.simulator.Assignment_1A_IntegratedTest" tests="2" skipped="0" failures="2" errors="0" timestamp="2022-01-21T04:00:16" hostname="Bens-MacBook-Air.local" time="0.025">
+  <properties/>
+  <testcase name="normalTest" classname="edu.vandy.simulator.Assignment_1A_IntegratedTest" time="0.019">
+    <failure message="java.lang.IllegalStateException: Being[101] only completed [0/10] iterations.&#10;Being[102] only completed [0/10] iterations.&#10;Being[103] only completed [0/10] iterations.&#10;Being[104] only completed [0/10] iterations.&#10;Being[105] only completed [0/10] iterations.&#10;Being[106] only completed [0/10] iterations.&#10;Being[107] only completed [0/10] iterations.&#10;Being[108] only completed [0/10] iterations.&#10;Being[109] only completed [0/10] iterations.&#10;Being[110] only completed [0/10] iterations." type="java.lang.IllegalStateException">java.lang.IllegalStateException: Being[101] only completed [0/10] iterations.
+Being[102] only completed [0/10] iterations.
+Being[103] only completed [0/10] iterations.
+Being[104] only completed [0/10] iterations.
+Being[105] only completed [0/10] iterations.
+Being[106] only completed [0/10] iterations.
+Being[107] only completed [0/10] iterations.
+Being[108] only completed [0/10] iterations.
+Being[109] only completed [0/10] iterations.
+Being[110] only completed [0/10] iterations.
+	at edu.vandy.simulator.Simulator.require(Simulator.java:698)
+	at edu.vandy.simulator.Simulator.validateEndState(Simulator.java:376)
+	at edu.vandy.simulator.Simulator.start(Simulator.java:274)
+	at admin.TestHelper.buildModelAndRun(TestHelper.kt:225)
+	at admin.TestHelper.buildModelAndRun(TestHelper.kt:191)
+	at admin.TestHelper.testStrategy(TestHelper.kt:76)
+	at admin.AssignmentIntegratedTest.normalTest(AssignmentIntegratedTest.kt:22)
+	at edu.vandy.simulator.Assignment_1A_IntegratedTest.normalTest(Assignment_1A_IntegratedTest.kt:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.mockito.internal.junit.JUnitSessionStore$1.evaluateSafely(JUnitSessionStore.java:55)
+	at org.mockito.internal.junit.JUnitSessionStore$1.evaluate(JUnitSessionStore.java:43)
+	at admin.AssignmentTests$mockkRule$1$1.evaluate(AssignmentTests.kt:51)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:293)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</failure>
+  </testcase>
+  <testcase name="stressTest" classname="edu.vandy.simulator.Assignment_1A_IntegratedTest" time="0.006">
+    <failure message="java.lang.IllegalStateException: Being[101] only completed [0/50] iterations.&#10;Being[102] only completed [0/50] iterations.&#10;Being[103] only completed [0/50] iterations.&#10;Being[104] only completed [0/50] iterations.&#10;Being[105] only completed [0/50] iterations.&#10;Being[106] only completed [0/50] iterations.&#10;Being[107] only completed [0/50] iterations.&#10;Being[108] only completed [0/50] iterations.&#10;Being[109] only completed [0/50] iterations.&#10;Being[110] only completed [0/50] iterations.&#10;Being[111] only completed [0/50] iterations.&#10;Being[112] only completed [0/50] iterations.&#10;Being[113] only completed [0/50] iterations.&#10;Being[114] only completed [0/50] iterations.&#10;Being[115] only completed [0/50] iterations.&#10;Being[116] only completed [0/50] iterations.&#10;Being[117] only completed [0/50] iterations.&#10;Being[118] only completed [0/50] iterations.&#10;Being[119] only completed [0/50] iterations.&#10;Being[120] only completed [0/50] iterations.&#10;Being[121] only completed [0/50] iterations.&#10;Being[122] only completed [0/50] iterations.&#10;Being[123] only completed [0/50] iterations.&#10;Being[124] only completed [0/50] iterations.&#10;Being[125] only completed [0/50] iterations.&#10;Being[126] only completed [0/50] iterations.&#10;Being[127] only completed [0/50] iterations.&#10;Being[128] only completed [0/50] iterations.&#10;Being[129] only completed [0/50] iterations.&#10;Being[130] only completed [0/50] iterations.&#10;Being[131] only completed [0/50] iterations.&#10;Being[132] only completed [0/50] iterations.&#10;Being[133] only completed [0/50] iterations.&#10;Being[134] only completed [0/50] iterations.&#10;Being[135] only completed [0/50] iterations.&#10;Being[136] only completed [0/50] iterations.&#10;Being[137] only completed [0/50] iterations.&#10;Being[138] only completed [0/50] iterations.&#10;Being[139] only completed [0/50] iterations.&#10;Being[140] only completed [0/50] iterations.&#10;Being[141] only completed [0/50] iterations.&#10;Being[142] only completed [0/50] iterations.&#10;Being[143] only completed [0/50] iterations.&#10;Being[144] only completed [0/50] iterations.&#10;Being[145] only completed [0/50] iterations.&#10;Being[146] only completed [0/50] iterations.&#10;Being[147] only completed [0/50] iterations.&#10;Being[148] only completed [0/50] iterations.&#10;Being[149] only completed [0/50] iterations.&#10;Being[150] only completed [0/50] iterations." type="java.lang.IllegalStateException">java.lang.IllegalStateException: Being[101] only completed [0/50] iterations.
+Being[102] only completed [0/50] iterations.
+Being[103] only completed [0/50] iterations.
+Being[104] only completed [0/50] iterations.
+Being[105] only completed [0/50] iterations.
+Being[106] only completed [0/50] iterations.
+Being[107] only completed [0/50] iterations.
+Being[108] only completed [0/50] iterations.
+Being[109] only completed [0/50] iterations.
+Being[110] only completed [0/50] iterations.
+Being[111] only completed [0/50] iterations.
+Being[112] only completed [0/50] iterations.
+Being[113] only completed [0/50] iterations.
+Being[114] only completed [0/50] iterations.
+Being[115] only completed [0/50] iterations.
+Being[116] only completed [0/50] iterations.
+Being[117] only completed [0/50] iterations.
+Being[118] only completed [0/50] iterations.
+Being[119] only completed [0/50] iterations.
+Being[120] only completed [0/50] iterations.
+Being[121] only completed [0/50] iterations.
+Being[122] only completed [0/50] iterations.
+Being[123] only completed [0/50] iterations.
+Being[124] only completed [0/50] iterations.
+Being[125] only completed [0/50] iterations.
+Being[126] only completed [0/50] iterations.
+Being[127] only completed [0/50] iterations.
+Being[128] only completed [0/50] iterations.
+Being[129] only completed [0/50] iterations.
+Being[130] only completed [0/50] iterations.
+Being[131] only completed [0/50] iterations.
+Being[132] only completed [0/50] iterations.
+Being[133] only completed [0/50] iterations.
+Being[134] only completed [0/50] iterations.
+Being[135] only completed [0/50] iterations.
+Being[136] only completed [0/50] iterations.
+Being[137] only completed [0/50] iterations.
+Being[138] only completed [0/50] iterations.
+Being[139] only completed [0/50] iterations.
+Being[140] only completed [0/50] iterations.
+Being[141] only completed [0/50] iterations.
+Being[142] only completed [0/50] iterations.
+Being[143] only completed [0/50] iterations.
+Being[144] only completed [0/50] iterations.
+Being[145] only completed [0/50] iterations.
+Being[146] only completed [0/50] iterations.
+Being[147] only completed [0/50] iterations.
+Being[148] only completed [0/50] iterations.
+Being[149] only completed [0/50] iterations.
+Being[150] only completed [0/50] iterations.
+	at edu.vandy.simulator.Simulator.require(Simulator.java:698)
+	at edu.vandy.simulator.Simulator.validateEndState(Simulator.java:376)
+	at edu.vandy.simulator.Simulator.start(Simulator.java:274)
+	at admin.TestHelper.buildModelAndRun(TestHelper.kt:225)
+	at admin.TestHelper.buildModelAndRun(TestHelper.kt:191)
+	at admin.TestHelper.testStrategy(TestHelper.kt:76)
+	at admin.AssignmentIntegratedTest.stressTest(AssignmentIntegratedTest.kt:37)
+	at edu.vandy.simulator.Assignment_1A_IntegratedTest.stressTest(Assignment_1A_IntegratedTest.kt:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.mockito.internal.junit.JUnitSessionStore$1.evaluateSafely(JUnitSessionStore.java:55)
+	at org.mockito.internal.junit.JUnitSessionStore$1.evaluate(JUnitSessionStore.java:43)
+	at admin.AssignmentTests$mockkRule$1$1.evaluate(AssignmentTests.kt:51)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:293)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

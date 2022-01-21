@@ -20,8 +20,7 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:extractNativeLibs="false"
-        android:icon="@drawable/palantir_bright"
-        android:testOnly="true" >
+        android:icon="@drawable/palantir_bright" >
         <activity
             android:name="edu.vandy.app.ui.screens.main.MainActivity"
             android:exported="true"

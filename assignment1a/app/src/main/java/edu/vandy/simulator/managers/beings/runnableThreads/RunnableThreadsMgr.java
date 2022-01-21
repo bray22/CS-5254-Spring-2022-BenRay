@@ -1,10 +1,17 @@
 package edu.vandy.simulator.managers.beings.runnableThreads;
 
 import java.util.List;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingDeque;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import edu.vandy.simulator.managers.beings.BeingManager;
+import edu.vandy.simulator.managers.palantiri.PalantiriManager;
+import edu.vandy.simulator.managers.palantiri.arrayBlockingQueuePalantiriManager.ArrayBlockingQueueMgr;
 import edu.vandy.simulator.utils.ExceptionUtils;
 
+import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 /**
@@ -34,7 +41,8 @@ public class RunnableThreadsMgr
     public SimpleBeingRunnable newBeing() {
         // Return a new SimpleBeingRunnable instance.
         // TODO -- you fill in here replacing this statement with your solution.
-        return null;
+        SimpleBeingRunnable simpleBeingRunnable = new SimpleBeingRunnable(this );
+        return simpleBeingRunnable;
     }
 
     /**
@@ -44,18 +52,27 @@ public class RunnableThreadsMgr
     @Override
     public void runSimulation() {
         // Call a method to create and start a thread for each being.
+
         // TODO -- you fill in here.
-        
+        beginBeingThreads();
 
         // Call a method that creates and starts a thread that's then
         //  used to wait for all the being threads to finish and
         //  return that thread to the caller.
+
         // TODO -- you fill in here.
+        Thread waiterThread = createAndStartWaiterForBeingThreads();
         
 
         // Block until the waiter thread has finished.
         // TODO -- you fill in here.
-        
+        try {
+            waiterThread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     /**
@@ -68,6 +85,9 @@ public class RunnableThreadsMgr
         // the beings, create a new Thread object for each one, and
         // add it to the list of mBeingThreads.
         //
+        RunnableThreadsMgr beingManager = new RunnableThreadsMgr();
+        System.out.print( beingManager.getBeings()  );
+
         // GRADUATE STUDENTS:
         // Set an "UncaughtExceptionHandler" for each being thread
         // that calls the BeingManager.error() method to indicate an
@@ -76,6 +96,16 @@ public class RunnableThreadsMgr
         // (though they are free to do so if they choose).
         //
         // TODO -- you fill in here.
+        beingManager.mBeingThreads =
+                IntStream.rangeClosed(1, beingManager.getBeingCount())
+                        .mapToObj(unused -> new Thread())
+                        .peek(thread -> {
+                            try {
+                                (thread).join();
+                            } catch (Exception e) {
+                                beingManager.error(e);
+                            }
+                        }).collect(toList());
         
 
         // Start all the threads in the List of Threads.
@@ -97,15 +127,35 @@ public class RunnableThreadsMgr
         // the catch clause, which trigger the simulator to generate a
         // shutdownNow() request.
         // TODO -- you fill in here.
-        
+
+        RunnableThreadsMgr beingManager = new RunnableThreadsMgr();
+
+        Thread waiterThread = new Thread(() -> {
+            beingManager.mBeingThreads =
+                    IntStream.rangeClosed(1, beingManager.getBeingCount())
+                            .mapToObj(unused -> new Thread())
+                            .peek(thread -> {
+                                try {
+                                  (thread).join();
+                                } catch (Exception e) {
+                                    beingManager.error(e);
+                                }
+                            })
+                            .collect(Collectors.toList());
+        });
+
+
+
+
 
         // Start running the thread.
         // TODO -- you fill in here.
+        waiterThread.start();
         
 
         // Return the thread.
         // TODO -- you fill in here replacing this statement with your solution.
-        return null;
+        return waiterThread;
     }
 
     /**

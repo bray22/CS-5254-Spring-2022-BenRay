@@ -1,8 +1,16 @@
 package edu.vandy.simulator.managers.beings.runnableThreads;
 
+import androidx.annotation.NonNull;
+
+import java.util.Objects;
+import java.util.concurrent.CancellationException;
+
 import edu.vandy.simulator.managers.beings.Being;
 import edu.vandy.simulator.managers.beings.BeingManager;
 import edu.vandy.simulator.managers.palantiri.Palantir;
+import edu.vandy.simulator.managers.palantiri.PalantiriManager;
+import edu.vandy.simulator.managers.palantiri.arrayBlockingQueuePalantiriManager.ArrayBlockingQueueMgr;
+import edu.vandy.simulator.model.implementation.components.PalantirComponent;
 
 /**
  * This class implements the gazing logic for a being that's
@@ -42,11 +50,38 @@ public class SimpleBeingRunnable
         // will block if there are no available palantiri (if a
         // concurrency error occurs in the assignment implementation,
         // null is returned and this being should immediately call
-        // Being.error(), which throws an IllegalStateException).
+        // Being.error(), which throws an IllegalStateException)..
+
+        //acquirePalantirAndGaze();
+        Palantir palantir = acquirePalantir();
+
+        if (palantir != null) {
+            try {
+                palantir.gaze(this);
+            } finally {
+                if (palantir == null) {
+                    error("palantir not available");
+                } else {
+                    releasePalantir(palantir);
+                }
+            }
+        } else {
+            error("palantir not available");
+        }
+
+
+
+
+
         // Then gaze at the palantir for this being (which blocks for
         // a random period of time).  Finally, release the palantir
         // for this being via a call to the appropriate Being super
         // class helper method.
+
+
+       // lateinit var palantir: Palantir
+
+        //var being = SimpleBeingRunnable(beingManager)
         // TODO -- you fill in here.
         
     }
