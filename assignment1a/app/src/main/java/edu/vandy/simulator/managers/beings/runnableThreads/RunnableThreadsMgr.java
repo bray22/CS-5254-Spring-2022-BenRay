@@ -1,5 +1,6 @@
 package edu.vandy.simulator.managers.beings.runnableThreads;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingDeque;
@@ -9,6 +10,7 @@ import java.util.stream.IntStream;
 import edu.vandy.simulator.managers.beings.BeingManager;
 import edu.vandy.simulator.managers.palantiri.PalantiriManager;
 import edu.vandy.simulator.managers.palantiri.arrayBlockingQueuePalantiriManager.ArrayBlockingQueueMgr;
+import edu.vandy.simulator.model.implementation.snapshots.PalantirSnapshot;
 import edu.vandy.simulator.utils.ExceptionUtils;
 
 import static java.util.stream.Collectors.joining;
@@ -85,8 +87,13 @@ public class RunnableThreadsMgr
         // the beings, create a new Thread object for each one, and
         // add it to the list of mBeingThreads.
         //
-        RunnableThreadsMgr beingManager = new RunnableThreadsMgr();
-        System.out.print( beingManager.getBeings()  );
+
+        mBeingThreads = new ArrayList(getBeingCount());
+        getBeings()
+            .forEach(being -> {
+                   Thread thread = new Thread(new SimpleBeingRunnable(this));
+                   being.run();
+            });
 
         // GRADUATE STUDENTS:
         // Set an "UncaughtExceptionHandler" for each being thread
@@ -96,21 +103,20 @@ public class RunnableThreadsMgr
         // (though they are free to do so if they choose).
         //
         // TODO -- you fill in here.
-        beingManager.mBeingThreads =
-                IntStream.rangeClosed(1, beingManager.getBeingCount())
-                        .mapToObj(unused -> new Thread())
-                        .peek(thread -> {
-                            try {
-                                (thread).join();
-                            } catch (Exception e) {
-                                beingManager.error(e);
-                            }
-                        }).collect(toList());
+
         
 
         // Start all the threads in the List of Threads.
         // TODO -- you fill in here.
-        
+        if (mBeingThreads != null) {
+            for (Thread thread : mBeingThreads) {
+                try { thread.run();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
     }
 
     /**
@@ -136,13 +142,14 @@ public class RunnableThreadsMgr
                             .mapToObj(unused -> new Thread())
                             .peek(thread -> {
                                 try {
-                                  (thread).join();
+                                  thread.join();
                                 } catch (Exception e) {
                                     beingManager.error(e);
                                 }
                             })
                             .collect(Collectors.toList());
         });
+
 
 
 

@@ -51,8 +51,12 @@ public class SimpleBeingRunnable
         // concurrency error occurs in the assignment implementation,
         // null is returned and this being should immediately call
         // Being.error(), which throws an IllegalStateException)..
+        // Then gaze at the palantir for this being (which blocks for
+        // a random period of time).  Finally, release the palantir
+        // for this being via a call to the appropriate Being super
+        // class helper method.
 
-        //acquirePalantirAndGaze();
+        // TODO -- you fill in here.
         Palantir palantir = acquirePalantir();
 
         if (palantir != null) {
@@ -68,21 +72,5 @@ public class SimpleBeingRunnable
         } else {
             error("palantir not available");
         }
-
-
-
-
-
-        // Then gaze at the palantir for this being (which blocks for
-        // a random period of time).  Finally, release the palantir
-        // for this being via a call to the appropriate Being super
-        // class helper method.
-
-
-       // lateinit var palantir: Palantir
-
-        //var being = SimpleBeingRunnable(beingManager)
-        // TODO -- you fill in here.
-        
     }
 }

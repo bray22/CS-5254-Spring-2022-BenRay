@@ -43,8 +43,10 @@ edu/vandy/app/modules/GlideApp.java
  edu.vandy.app.modules.GlideApp
 edu/vandy/app/modules/GlideOptions.java
  edu.vandy.app.modules.GlideOptions
-edu/vandy/simulator/managers/beings/runnableThreads/RunnableThreadsMgr.java
- edu.vandy.simulator.managers.beings.runnableThreads.RunnableThreadsMgr
+edu/vandy/simulator/managers/beings/BeingManager.java
+ edu.vandy.simulator.managers.beings.BeingManager
+ edu.vandy.simulator.managers.beings.BeingManager$Factory
+ edu.vandy.simulator.managers.beings.BeingManager$Factory$Type
 edu/vandy/simulator/managers/palantiri/arrayBlockingQueuePalantiriManager/ArrayBlockingQueueMgr.java
  edu.vandy.simulator.managers.palantiri.arrayBlockingQueuePalantiriManager.ArrayBlockingQueueMgr
 edu/vandy/simulator/managers/beings/Being.java
@@ -93,7 +95,5 @@ edu/vandy/simulator/Controller.java
  edu.vandy.simulator.Controller
 edu/vandy/simulator/model/interfaces/StateProvider.java
  edu.vandy.simulator.model.interfaces.StateProvider
-edu/vandy/simulator/managers/beings/BeingManager.java
- edu.vandy.simulator.managers.beings.BeingManager
- edu.vandy.simulator.managers.beings.BeingManager$Factory
- edu.vandy.simulator.managers.beings.BeingManager$Factory$Type
+edu/vandy/simulator/managers/beings/runnableThreads/RunnableThreadsMgr.java
+ edu.vandy.simulator.managers.beings.runnableThreads.RunnableThreadsMgr
