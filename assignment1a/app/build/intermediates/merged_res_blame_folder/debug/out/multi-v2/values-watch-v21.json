@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/benray/vandy/courses/cs5254_concurrent_oop/CS-5254-Spring-2022-BenRay/assignment1a/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "/Users/benray/.gradle/caches/transforms-3/7c535073159fa45b5872f0499569ec9b/transformed/appcompat-1.4.0/res/values-watch-v21/values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/benray/vandy/courses/cs5254_concurrent_oop/CS-5254-Spring-2022-BenRay/assignment1a/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/benray/.gradle/caches/transforms-3/7c535073159fa45b5872f0499569ec9b/transformed/appcompat-1.4.0/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}
